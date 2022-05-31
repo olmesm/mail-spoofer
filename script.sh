@@ -19,3 +19,5 @@ service sendmail start &
 
 echo -e "\n\n>> Run the script\n"
 php index.php
+
+exit 0

@@ -1,7 +1,10 @@
 <?php
-echo "\n\n>> Starting send to " . $_ENV["RECEIVER"] . " from " . $_ENV["SENDER"] . "\n";
+$sender = $argv[1];
+$receiver = $argv[2];
 
-$to = "" . $_ENV["RECEIVER"] . "";
+echo "\n\n>> Starting send to " . $receiver . " from " . $sender . "\n";
+
+$to = "" . $receiver . "";
 
 $subject = "TEST SPOOFING";
 
@@ -19,8 +22,8 @@ $message = "
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-type: text/html; charset=iso-8859-1";
 
-$headers[] = "To: " . $_ENV["RECEIVER"] . " <" . $_ENV["RECEIVER"] . ">";
-$headers[] = "From: " . $_ENV["SENDER"] . " <" . $_ENV["SENDER"] . ">";
+$headers[] = "To: " . $receiver . " <" . $receiver . ">";
+$headers[] = "From: " . $sender . " <" . $sender . ">";
 
 // Mail it
 mail($to, $subject, $message, implode("\r\n", $headers));

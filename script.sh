@@ -14,7 +14,7 @@ echo "sendmail_path=/usr/sbin/sendmail -t -i" >> /usr/local/etc/php/conf.d/sendm
 echo -e "\n\n>> Configure hosts for sendmail\n"
 echo "$(hostname -i)\t$(hostname) $(hostname).localhost" >> /etc/hosts
 
-echo -e "\n\n>> Start the service in the background\n"
-service sendmail start & 
+echo -e "\n\n>> Start the sendmail service - this takes a while...\n"
+service sendmail start
 
-sleep 30 && echo -e "\n\n>> Ready to run \`php index.php <sender-email> <receiver-email>\`\n"
+echo -e "\n\n>> Ready to run \`php index.php <sender-email> <receiver-email>\`\n"

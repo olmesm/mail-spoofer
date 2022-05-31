@@ -10,7 +10,7 @@ Requires:
 
 - [docker](https://docker.com)
 
-This is quite slow to run ±30 seconds to boot, then ±10 seconds to send mail.
+This is quite slow to run ±60 seconds to boot, then ±10 seconds to send mail.
 
 ```bash
 docker run -it --rm -v $(pwd)/:/usr/app -w /usr/app \

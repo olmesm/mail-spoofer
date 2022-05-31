@@ -4,7 +4,7 @@ Test sending mail as a spoofed account.
 
 ---
 
-## Running
+## Running
 
 Requires:
 
@@ -18,4 +18,3 @@ docker run -it --rm -v $(pwd)/:/usr/app -w /usr/app \
     -e RECEIVER=receiver@example.com \
     php:8-cli bash script.sh
 ```
-# mail-spoofer
